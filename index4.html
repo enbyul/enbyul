@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>abcde</h1>
+    <button>버튼</button>
+
+    <script>
+        var h1tag = $('h1').html();
+
+        $('button').on('click',function(){
+            console.log(h1tag[1]);
+            var h12 = '';
+            var num = 0;
+            var h1set = setInterval(function(){
+               $('h1').html(h12 += h1tag[num]);
+               num++;
+               console.log(num);
+               if(num >= h1tag.length){
+                   clearInterval(h1set);
+               }
+            },500);
+
+
+        });
+    </script>
+</body>
+</html>

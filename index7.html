@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">버튼</button>
+    <script>
+        var peo = {
+            name : '손흥민',
+            sayHi : function(){
+                //console.log(this);
+                console.log('안녕 나는 ' + this.name);
+            }
+        }
+
+        peo.sayHi();
+
+        var file = {
+            data : [1,2,3,4,5]
+        }
+
+        file.fileAll = function(){
+            var box = 0;
+            this.data.forEach(function(i){
+                box+=i
+            })
+            console.log(box);
+        }
+        
+        file.fileAll();
+        
+        $('#btn').on('click',function(){
+            setTimeout(() => {
+                console.log(this.innerHTML);
+            }, 1000)
+        });
+
+
+
+        function a (){
+            window.as = 1;
+        }
+
+        //console.log(as);
+
+        for (var i = 1; i<6; i++){
+            setTimeout(function() { console.log(i) }, i*1000);
+        }
+    </script>
+    
+</body>
+</html>

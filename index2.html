@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .size-select{
+            /* display: none; */
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('#option1').on('input',function(){
+                if($(this).val() == '셔츠'){
+                    $('#option2').html(`<option>95</option>
+                    <option>100</option>
+                    <option>100</option>`)
+                }else{
+                    $('#option2').html('<option>sddd</option>');
+                }
+            });
+
+
+            var size = [10, 20, 30, 40, 50]
+
+            size.forEach(function(i){
+                $('html').append(`<p>${i}</p>`);
+                
+            });
+
+            var mem = ['흥민', '영희', '철수', '재석'];
+            function name(name1){
+                for(var i = 0; i < mem.length; i++){
+                    if(mem[i] == name1){
+                        console.log('oo');
+                    }
+                }
+            }
+
+            name('명수');
+
+
+
+            });
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form class="container">
+        <div class="form-group">
+            <select class="form-control" id="option1">
+                <option>모자</option>
+                <option>셔츠</option>
+            </select>
+
+            <div class="size-select">
+                <p style="margin-top:40px;">사이즈선택</p>
+                <select class="form-control" id="option2">
+                </select>
+            </div>
+        </div>
+    </form>
+    
+</body>
+</html>
