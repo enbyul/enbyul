@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        function plus(a, b, c){
+            console.log(a + b + c);
+        }
+        var array = [10, 20, 30];
+        plus(...array);
+
+        var person = {
+            a : function(){
+                console.log(this.name + 'hi')
+            }
+        }
+
+        //person.a();
+
+        var person2 = {
+            name : '손흥민'
+        }
+
+        person.a.apply(person2);
+        person.a.call(person2);
+
+        function plus2(a, b = 2 * a){
+            console.log(a + b)
+        }
+        plus2(1);
+
+        function a1(a,b,c,d){
+            console.log(arguments);
+        }
+        a1();
+
+
+        function a2(...rest){
+            for (var i = 0; i < rest.length; i++){
+                console.log(rest[i]);
+            }
+        }
+        a2(1,2,3,4,5,6,7,8);
+
+        function arr (bear){
+            console.log(...[...bear].sort());
+        }
+        arr('bear');
+
+        function text(txt){
+            var result = {};
+            [...txt].forEach(function(a){
+                if( result[a] > 0 ){ result[a]++ }else{ result[a] = 1 }
+            });
+            console.log(result);
+        }
+        text('aacbbb')
+    </script>
+    
+</body>
+</html>
