@@ -62,6 +62,30 @@
             console.log(result);
         }
         text('aacbbb')
+
+        var a1 = '손흥민';
+        var a2 = '입니다';
+
+        function box (a, b, c){
+            console.log(a);//['안녕하세요','입니다']
+            console.log(b);//손흥민
+            console.log(c);//입니다
+        }
+        box`안녕하세요 ${a1} ${a2} 입니다`
+
+
+        var pants = 0;
+        var socks = 100;
+        function space (a, b, c){
+            if(b == 0){
+                console.log('바지안팔아요')
+            }else{
+            console.log(a[1] + b + a[0] + c)
+            }
+        }
+        space`바지 ${pants} 양말 ${socks}`
+
+
     </script>
     
 </body>
