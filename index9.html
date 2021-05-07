@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+        var box0 = {
+            name : 'kim',
+            age : 15,
+            sayHi : function(){
+                console.log(this);
+                console.log('안녕하세요' + this.name + '입니다')
+            }
+        }
+        box0.sayHi();
+        
+        function box (name = 'kim', age) {
+            //console.log(this);
+            this.name = name;
+            this.age = 15;
+            this.sayHi = function(){
+                console.log('안녕하세요' + this.name + '입니다')
+            }
+        }
+
+        var box2 = new box('park', 14);
+        var box3 = new box('jo' , 16);
+        var box4 = new box(undefined , 18);
+        //console.log(box);
+
+        function product(name, price){
+            this.name = name;
+            this.price = price;
+            this.char = function(){
+                console.log(price * 0.1);
+            }
+        }
+
+        var pro1 = new product('shirts', 50000);
+        var pro2 = new product('pants', 60000);
+
+        pro2.char();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

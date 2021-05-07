@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function students(name, age){
+            this.name = name;
+            this.age = 20;
+            this.sayHi = function(){
+                console.log('안녕 나는 ' + this.name + '이야')
+            }
+
+        }
+
+        var stu1 = new students('Kim', 20);
+        var stu2 = new students('Park', 21);
+        var stu3 = new students('Lee', 22);
+
+        stu1.sayHi();
+
+        Array.prototype.remove3 = function(){
+            for(var i = 0; i < this.length; i++){
+                if(this[i] === 3){
+                    this.splice(i, 1)
+                }
+            }
+        }
+        var arr = [1,2,3];
+        arr.remove3();
+
+        console.log(arr);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
