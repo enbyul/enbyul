@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var peo = {
+            name : 'park',
+            age : 30,
+            get nextAge(){
+                return this.age + 1
+            },//데이터 꺼내쓰는 함수 get
+            //return 필수
+            set setAge(age){
+                this.age = parseInt(age);
+            }//데이터 변경하는 함수 set
+            //파라미터 1개만 필수. 두개x
+        }
+
+        peo.setAge = '20';
+        peo.nextAge; // get붙이고 ()쓰면 에러남. 함수지만 괄호 생략 get 사용시
+
+
+        class peo1 {
+            constructor(){
+                this.name = 'park';
+                this.age = 20;
+            }
+            get nextAge(){
+                return this.age + 1;
+            }
+        }
+
+        var peo2 = new peo1();
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

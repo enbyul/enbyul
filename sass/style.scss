@@ -1,0 +1,57 @@
+
+@import '_reset.scss';
+
+// $maincolor : #ccc;
+
+// .box{
+//     background:$maincolor;
+//     width:100px;
+//     height:100px;
+// }
+
+// .container{
+//     div{
+//         background:cornflowerblue;
+//     }
+//     h3{
+//         color: $maincolor;
+//     }
+// }
+
+// %btn{
+//     padding:10px;
+//     font-size:16px;
+//     background:lightblue;
+// }
+
+// .btn-green{
+//     @extend %btn;
+//     color:green;
+// }
+
+// @mixin title($fontSize){
+//     font-size:$fontSize;
+//     letter-spacing: -1px;
+// }
+
+// h1{
+//     @include title(30px);
+// }
+// h2{
+//     @include title(25px);
+// }
+// h3{
+//     @include title(20px);
+// }
+
+$boxColor : rgb(235, 222, 224);
+
+.container{
+    display: flex;
+    div{
+        background : $boxColor;
+        padding:10px;
+        border:1px solid #ccc;
+        flex-grow: 1;
+    }
+}

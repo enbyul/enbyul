@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        class box {
+            constructor(name){
+                this.fir = 'kim',
+                this.name = name;
+            }
+            sayHi(){
+                console.log('안녕');
+            }
+        }
+
+        var box1 = new box('만덕');
+
+        class contain extends box {
+            constructor(name){
+                super(name);
+                console.log(this);
+                this.age = 50;
+            }
+            sayHi(){
+                console.log('hi');
+                super.sayHi();
+            }
+        }
+
+        var contain1 = new contain('만수');
+
+
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

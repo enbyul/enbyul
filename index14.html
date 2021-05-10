@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        class dog {
+            constructor(type, color){
+                this.type = type;
+                this.color = color;
+            }
+            agePlus (){
+                if(this instanceof cat){
+                    this.age++
+                }//A instanceof B : a에서 파생된 오브젝트인지 검사 true / false
+                //this에서 파생된 오브젝트가 cat이 true일 경우 실행
+            }
+        }
+
+        var dog1 = new dog('말티즈', 'white');
+        var dog2 = new dog('진돗개', 'brown');
+
+        class cat extends dog {
+            constructor(type, color, age){
+                super(type, color);
+                this.age = parseInt(age);
+            }
+        }
+
+        var cat1 = new cat('코숏', 'white', '5');
+        var cat2 = new cat('러시안블루', 'brown', '2');
+
+
+        class unit {
+            constructor(sp, hp){
+                this.sp = sp;
+                this.hp = hp;
+            }
+            get battlePoint(){
+                return this.sp + this.hp;
+            }
+            set heal(heal1){
+                this.hp = this.hp + heal1;
+            }
+        }
+        
+        var unit1 = new unit(5, 100);
+        unit1.heal = 50;
+        
+        // console.log(bettlePoint);
+        console.log(unit1.battlePoint);
+        console.log(unit1.hp);
+
+        var data = {
+            odd : [],
+            even : [],
+            setNum(...setN){
+                //var numBox = [...setN]
+                setN.forEach(function(i){
+                    if(i % 2 == 0){
+                        this.data.even.push(i);
+                    }else{
+                        this.data.odd.push(i);
+                    }
+                });
+            },
+            get getNum(){
+                console.log(this);
+                this.odd.sort( function(a, b){ return a - b } );
+                this.even.sort( function(a, b){ return a - b } );
+            }
+        }
+        
+        data.setNum( 2,6,4,5,3,1,7,8);
+        data.getNum;
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

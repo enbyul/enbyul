@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+<style>
+    *{
+        margin:0; padding:0;
+    }
+    .flex-container{
+        display: flex;
+        /* flex-wrap: wrap; */
+        border:1px solid red;
+        height:300px;
+        align-items: center;
+        justify-content: start;
+    }
+    .flex-box{
+        width:100px;
+        height:100px;
+        background:grey;
+        margin:5px;
+    }
+    .f-container{
+        display: flex;
+        border:1px solid red;
+        margin-top:50px;
+        height:120px;
+        align-items: center;
+
+    }
+    .f-container ul{
+        display: flex;
+    }
+    .f-container ul li{
+        list-style: none;
+        margin-left:20px;
+    }
+    .f-container h1{
+    }
+    .flex-emp{
+        flex-grow: 1;
+    }
+</style>
+</head>
+<body>
+
+    <div class="flex-container">
+        <div class="flex-box"></div>
+        <div class="flex-box"></div>
+        <div class="flex-box"></div>
+    </div>
+
+    <div class="f-container">
+        <h1>logo</h1>
+        <span class="flex-emp"></span>
+        <ul>
+            <li>menu1</li>
+            <li>menu2</li>
+        </ul>
+    </div>
+    
+</body>
+</html>
