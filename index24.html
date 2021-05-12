@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        var person = ['john', 'tom', 'andy', 'tom']
+        var person2 = new Set(['john', 'tom', 'andy', 'tom']); //중복된 자료 자동삭제
+        person2.add('sally');
+        person2.delete('sally');
+        person2.has('tom');
+        person2.size;
+
+        person = [...person2]
+        //person2가 중괄호로 만들어져있어서 array가 아니다. 그래서 다루기 번거로워서 array로 바꿔줌.
+        
+        
+    </script>
+    
+</body>
+</html>
